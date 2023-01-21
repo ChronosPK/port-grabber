@@ -4,6 +4,13 @@ Grab ports from initial nmap output in order to analyze deeply only the open por
 ### How to use it
 Script showcased on my [website](https://chronossec.site/port-grabber-325348de8b7a4d6bbab91c8161e19e88)
 
+**Command structure**:
+```bash
+port-grabber.sh -f <nmap-output-file> > <open-ports-file>
+```
+
+
+**Example**:
 ```bash
 sudo nmap -O -Pn -p- -v $IP -oN nmap/nmap.init;
 port-grabber.sh -f nmap/nmap.init > nmap/ports;
