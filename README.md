@@ -20,3 +20,9 @@ sudo nmap -O -Pn -sC -sV -v -A -T4 -p $(cat nmap/ports) $IP -oN nmap/nmap.alltcp
 ### Why do it so?
 Using this script is viable because you can start with a small recon that doesn't require too much detail for each port.
 Once you got a list of open ports, you can start scanning in depth each of them.
+
+
+### Add the script to system binaries (to call it without path)
+```bash
+sudo cp ./port-grabber.sh /bin/port-grabber.sh  
+```
